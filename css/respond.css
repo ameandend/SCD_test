@@ -1,0 +1,282 @@
+/* 1280px */
+@media screen and (max-width:1280px) {
+
+    /* 1. 제거하기 */
+    nav {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.7);
+        top: 0;
+        left: -100%;
+        z-index: 100;
+    }
+
+    /* 헤어에 있던 메뉴 띄우기 */
+    .main-menu {
+        display: block;
+        width: 70%;
+        height: 100%;
+        max-width: 700px;
+        background: #fff;
+        text-indent: 3rem;
+    }
+
+    .main-menu>li::after {
+        left: 0;
+        transform: translateX(0);
+    }
+
+    .main-menu>li>a {
+        border-bottom: 1px solid #ddd;
+        background: url(../images/icon-down.svg) no-repeat 90% right;
+
+    }
+
+    .main-menu>.active>a {
+        background-image: url(../images/icon-up.svg);
+    }
+
+    .depth1 {
+        /* display: block; */
+        /* pc버전에서 position:absolute를 해제 */
+        position: static;
+        text-indent: 50px;
+        line-height: 2;
+    }
+
+    /* 2. 보이기 */
+    /* 3. 100% 만들기 */
+    .news-list {
+        /* 리스트 한개씩 떨어뜨리기 */
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .news-list>li {
+        padding: 10rem 4rem;
+        /* 4개중에 2개만 보이게 */
+        width: calc(50% - 1rem);
+    }
+
+    .scd-list>li {
+        width: calc(100% / 3);
+        /* 높이 1대1비율로 조절 */
+        aspect-ratio: 1/1;
+        /* 마진값 원래대로 */
+        margin-left: 0;
+    }
+
+    .scd-list>li>a {
+        width: 100%;
+        height: 100%;
+        padding: 6rem;
+        font-size: 1.6rem;
+    }
+
+
+}
+
+@media screen and (max-width:1128px) {
+    html {
+        font-size: 8px;
+    }
+
+    .section-title {
+        padding: 5rem 0 3rem;
+    }
+
+    .product {
+        height: auto;
+    }
+
+    .product-arrow-list {
+        display: none;
+    }
+
+    .promotion-movie {
+        width: 100%;
+    }
+
+    .scd-wrap::before {
+        display: none;
+    }
+
+    .scd-list>li>a {
+        text-align: center;
+    }
+
+    footer .inner {
+        padding: 4rem 6rem;
+    }
+
+}
+
+@media screen and (max-width:920px) {
+
+    /* scd-list 안에 아이콘 빼기 */
+    .scd-list>li>a .scd-title {
+        font-size: 2.8rem;
+        margin: 3rem 0;
+    }
+
+    .scd-list>li:first-child .scd-title:before,
+    .scd-list>li:nth-child(2) .scd-title:before,
+    .scd-list>li:nth-child(3) .scd-title:before {
+        display: none;
+    }
+}
+
+/* 768px mobile */
+@media screen and (max-width:768px) {
+
+    /* 제거하기 */
+    .aside-menu,
+    .arrow-btn,
+    .scroll-awrap,
+    .promotion-movie .promotion .movie-more::after {
+        display: none;
+    }
+
+    .main-slider-wrap {
+        margin-top: 50px;
+    }
+
+    .pager-btn {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 2rem;
+    }
+
+    .section-title {
+        font-size: 4rem;
+        padding: 3rem 0 2rem;
+    }
+
+    .product-list {
+        gap: 2rem;
+    }
+
+    .product-list>li,
+    .product-list>.active {
+        flex: 0 0 50%;
+    }
+
+    .product-list>li .text-box {}
+
+    .promotion-movie {
+        /* 세로로 붙이고 순서 반대로 바꾸기 */
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .promotion-movie .promotion {
+        padding: 1rem 5rem;
+        position: static;
+        /* translateY값 취소 */
+        transform: translateY(0);
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .promotion img {
+        width: 4rem;
+    }
+
+    .promotion-movie .promotion .movie-more {
+        margin: 0;
+    }
+
+    .promotion-movie video {
+        width: 100%;
+    }
+
+    .news-list>li {
+        background: url(../images/bg-new-bottom.png) right bottom no-repeat;
+        background-size: 12rem;
+
+    }
+
+    .scd-list>li>a .scd-title i {
+        display: none;
+    }
+
+    footer .inner {
+        /* 풋터 메뉴 아래도 떨어뜨리기 */
+        display: block;
+        text-align: center;
+        padding: 4rem 16px;
+    }
+
+    .footer-right {
+        margin-top: 10px;
+        align-items: center;
+    }
+
+    .footer-right>.footer-menu {
+        gap: 2rem;
+    }
+}
+
+/* 640px */
+@media screen and (max-width:640px) {
+    header {
+        padding: 1rem 0;
+    }
+
+    .logo {
+        width: 40vw;
+    }
+
+    .gnb-wrap {
+        gap: 1rem;
+    }
+
+    .lang span {
+        display: none;
+    }
+
+    .product-list>li {
+        border-radius: 2rem;
+    }
+
+    .product-list>li .text-box {
+        padding: 2rem;
+    }
+
+    /* 뉴스 하나씩 나오도록 */
+    .news-list>li {
+        width: 100%;
+    }
+
+    /* 하나씩 나오도록 */
+    .scd-list {
+        /* display: block; */
+        flex-direction: column;
+        gap: 2rem;
+        margin: 0;
+    }
+
+    .scd-list>li {
+        width: 100%;
+        aspect-ratio: auto;
+    }
+
+    .scd-list>li>a {
+        border-radius: 4rem;
+        padding: 4rem;
+    }
+
+    .scd-list>li:first-child .scd-title:before,
+    .scd-list>li:nth-child(2) .scd-title:before,
+    .scd-list>li:nth-child(3) .scd-title:before {
+        display: block;
+        margin: 0 auto;
+        right:0;
+    }
+
+    footer .footer-logo img {
+        width: 40vw;
+    }
+}

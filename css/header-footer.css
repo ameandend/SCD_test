@@ -1,7 +1,11 @@
 /* header */
 header {
-
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    top: 0;
+    background: rgba(255, 255, 255, 0.8);
 }
 
 header .inner {
@@ -90,7 +94,7 @@ header .inner {
 .gnb-wrap .lang a .lang-chnage {}
 
 .gnb-wrap .lang-list {
-    /* display: none; */
+    display: none;
     /* 부모 .gnb-wrap .lang */
     position: absolute;
     background: #fff;
@@ -114,7 +118,52 @@ header .inner {
 
 /* footer */
 
-footer {}
+footer {
+    padding-top: 7rem;
+}
+
+footer .inner {
+    position: relative;
+}
+
+.top-btn {
+    position: absolute;
+    right: 0;
+    top: -70px;
+}
+
+.top-btn>a {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem;
+    background: rgba(255, 38, 38, 0.5);
+    transition: 0.8s;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.top-btn>a::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    /* background: url(../images/icon-up-white.svg); */
+    background: url(../images/icon-arrow-45deg.svg);
+    background-size: 100%;
+    transform: rotate(-45deg);
+
+}
+
+.top-btn>a:hover {
+    background: var(--main-color);
+}
+
+
 
 footer .inner {
     max-width: 1700px;
