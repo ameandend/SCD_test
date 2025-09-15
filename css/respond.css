@@ -159,7 +159,7 @@
 
     .product-list>li,
     .product-list>.active {
-        flex: 0 0 60%;
+        flex: 0 0 50%;
     }
 
     .product-list>li .text-box {}
