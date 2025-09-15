@@ -29,12 +29,12 @@
 
     .main-menu>li>a {
         border-bottom: 1px solid #ddd;
-        background: url(../images/icon-down.svg) no-repeat 90% right;
+        background: url(../images/icon-down.svg) no-repeat right 90%;
 
     }
 
     .main-menu>.active>a {
-        background-image: url(../images/icon-up.svg);
+        background: url(../images/icon-up.svg);
     }
 
     .depth1 {
@@ -155,15 +155,16 @@
 
     .product-list {
         gap: 2rem;
+        overflow: hidden;
+        justify-content: left;
+        padding-right: 2rem;
     }
 
-    .product-list>li {
+    .product-list>li,
+    .product-list>.active {
         flex: 0 0 50%;
     }
 
-    /* .product-list>.active {
-        flex: 0 0 50%;
-    } */
 
     .product-list>li .text-box {}
 
@@ -248,6 +249,9 @@
         padding: 2rem;
     }
 
+
+
+
     /* 뉴스 하나씩 나오도록 */
     .news-list>li {
         width: 100%;
@@ -276,7 +280,10 @@
     .scd-list>li:nth-child(3) .scd-title:before {
         display: block;
         margin: 0 auto;
-        right: 0;
+        /* right: 0; */
+        position: relative;
+        left: 13%;
+        /* transform: translateX(-50%); */
     }
 
     footer .footer-logo img {
