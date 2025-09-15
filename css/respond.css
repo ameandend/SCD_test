@@ -161,9 +161,9 @@
         flex: 0 0 50%;
     }
 
-    .product-list>.active {
+    /* .product-list>.active {
         flex: 0 0 50%;
-    }
+    } */
 
     .product-list>li .text-box {}
 
