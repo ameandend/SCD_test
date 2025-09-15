@@ -273,10 +273,20 @@
     .scd-list>li:nth-child(3) .scd-title:before {
         display: block;
         margin: 0 auto;
-        right:0;
+        right: 0;
     }
 
     footer .footer-logo img {
         width: 40vw;
     }
+}
+
+@media screen and (max-width:480px) {
+    /* 각 센션 아래 여백 절반
+    .section-title 절반
+    
+    엘사반정 절반 / 위아래 여백 절반
+    뉴스 안쪽여백 줄이기
+    버튼 60% 줄이기
+    footer 위 하얀 여백 절반 */
 }
