@@ -157,7 +157,10 @@
         gap: 2rem;
     }
 
-    .product-list>li,
+    .product-list>li {
+        flex: 0 0 50%;
+    }
+
     .product-list>.active {
         flex: 0 0 50%;
     }
